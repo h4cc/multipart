@@ -22,23 +22,17 @@ class ParserSelector
      * Give me your Content-Type, and i give you a parser.
      *
      * @param $contentType
-     * @return MultipartParser
+     * @return MultipartParser|null
      */
     public function getParserForContentType($contentType)
     {
-        list($mime, $boundary) = $this->parseContentType($contentType);
-
-        switch($mime) {
-            case 'multipart/form-data':
-            case 'multipart/mixed':
-            case 'multipart/alternative':
-            case 'multipart/digest':
-            case 'multipart/parallel':
-            default:
-                $parser = new MultipartParser();
-                break;
+        if(0 !== stripos($contentType, 'multipart/')) {
+            return null;
         }
 
+        list($mime, $boundary) = $this->parseContentType($contentType);
+
+        $parser = new MultipartParser();
         $parser->setBoundary($boundary);
 
         return $parser;
