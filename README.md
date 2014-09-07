@@ -1,4 +1,5 @@
 # h4cc/multipart
+[![Build Status](https://travis-ci.org/h4cc/multipart.svg?branch=master)](https://travis-ci.org/h4cc/multipart)
 
 A PHP library for parsing (and generating) [RFC1341 Multipart](http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html).
 

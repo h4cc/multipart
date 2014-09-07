@@ -1,0 +1,25 @@
+{
+    "name": "h4cc/multipart",
+    "description": "A PHP library for parsing and generating RFC1341 Multipart.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julius Beckmann",
+            "email": "github@h4cc.de"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "h4cc\\Multipart\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": { "dev-master": "1.0-dev" }
+    }
+}
